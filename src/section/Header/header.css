@@ -1,0 +1,84 @@
+.link {
+  font-family: "Lufga Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.015em;
+  padding: 10px 40px;
+  color: #ffffff;
+  border-radius: 60px;
+  transition-duration: 300ms;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  &.active {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 40px;
+
+    /* Orange / 400 */
+    background: #fd853a;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    &:hover {
+      /* Orange / 400 */
+      background: #fd853a;
+    }
+  }
+  &:hover {
+    /* Frame 8 */
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.LogoIconText {
+  span:nth-child(1) {
+    font-family: "Lufga Regular";
+
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+
+    /* Gray / 400 */
+    color: #98a2b3;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: -4px 0px;
+  }
+
+  span:nth-child(2) {
+    font-family: "Lufga SemiBold";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    /* identical to box height */
+    letter-spacing: -0.015em;
+
+    color: #ffffff;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .link {
+    font-size: 16px;
+  }
+}

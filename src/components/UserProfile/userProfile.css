@@ -1,0 +1,26 @@
+.SvgIcon {
+  transition: transform ease-in-out 300ms;
+
+  transform: scale(0);
+}
+
+.SvgIconActive {
+  transform: scale(1);
+}
+
+.CTAtext {
+  font-family: "Lufga Regular";
+
+  font-size: 20px;
+  line-height: 34px;
+  /* identical to box height */
+  letter-spacing: -0.015em;
+
+  color: #ffffff;
+}
+
+@media screen and (width >=1024px) {
+  .CTAtext {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,22 @@
+.ServicesTitle {
+  font-family: "Lufga Medium";
+  line-height: 100%;
+  /* identical to box height, or 48px */
+  letter-spacing: -0.015em;
+
+  /* Gray/25 */
+  color: #fcfcfd;
+
+  span {
+    color: #fd853a;
+  }
+}
+
+.ServicesParagraph {
+  font-family: "Lufga Medium";
+
+  line-height: 26px;
+  letter-spacing: -0.015em;
+
+  color: #ffffff;
+}

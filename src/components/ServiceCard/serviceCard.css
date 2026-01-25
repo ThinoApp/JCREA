@@ -1,0 +1,23 @@
+.cardMask {
+  /* width: 100%; */
+  /* height: 100%; */
+  object-fit: cover;
+  mask-size: 100% 100%;
+
+  mask-repeat: no-repeat;
+  mask-image: url("/assets/MaskImage.png");
+  /* -webkit-mask-image: url("/assets/MaskImage.png"); */
+  /* mask-image: url("./Rectangle.png"); */
+}
+
+.cardText {
+  /* UI/ UX Design */
+
+  font-family: "Lufga Medium";
+
+  line-height: 42px;
+  /* identical to box height */
+  letter-spacing: -0.015em;
+
+  color: #ffffff;
+}

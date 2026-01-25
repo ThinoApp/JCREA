@@ -1,0 +1,24 @@
+.heroTextParagraph {
+  font-family: "Lufga Medium";
+
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.015em;
+
+  /* Gray / 700 */
+  color: #344054;
+}
+
+.heroTextTitle {
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 47px;
+  line-height: 100%;
+  /* identical to box height, or 47px */
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  /* Gray/900 */
+  color: #171717;
+}
