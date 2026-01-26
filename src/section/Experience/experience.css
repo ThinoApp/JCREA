@@ -1,0 +1,38 @@
+.ExperienceTitle {
+  font-family: "Lufga Medium";
+  line-height: 100%;
+  /* identical to box height, or 48px */
+  letter-spacing: -0.015em;
+
+  /* Gray/25 */
+  color: #000;
+
+  span {
+    color: #fd853a;
+  }
+}
+
+.ExperienceItem {
+  .title {
+    font-family: "Lufga Semibold";
+    line-height: 100%;
+    /* identical to box height, or 40px */
+    letter-spacing: -0.015em;
+
+    /* Gray / 700 */
+    color: #344054;
+  }
+  .description {
+    font-family: "Lufga Medium";
+
+    line-height: 26px;
+    letter-spacing: -0.015em;
+
+    /* Gray / 400 */
+    color: #98a2b3;
+  }
+}
+
+.ExperienceItem:nth-child(even) {
+  text-align: end;
+}

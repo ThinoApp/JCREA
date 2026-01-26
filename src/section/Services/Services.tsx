@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Services = () => {
   return (
-    <div className="relative bg-[url('/assets/service_bg.jpg')] bg-cover h-screen w-screen overflow-hidden sm:py-12 lg:px-12">
+    <div className="relative bg-[url('/assets/service_bg.jpg')] bg-cover h-screen w-screen sm:h-full overflow-hidden sm:py-12 lg:px-12 lg:py-36">
       <motion.img
         src="/assets/fleur1.png"
         alt="Fleur 1"
