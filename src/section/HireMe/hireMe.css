@@ -1,0 +1,38 @@
+.HireMeTitle {
+  font-family: "Lufga Semibold";
+  line-height: 100%;
+  /* identical to box height, or 64px */
+  letter-spacing: -0.015em;
+
+  /* Gray / 700 */
+  color: #344054;
+}
+
+.HireMeParagraph {
+  font-family: "Lufga Regular";
+
+  line-height: 26px;
+  letter-spacing: -0.015em;
+
+  /* Gray / 400 */
+  color: #98a2b3;
+}
+
+.HireMeStatTitle {
+  font-family: "Lufga Medium";
+
+  line-height: 47px;
+  /* identical to box height */
+  letter-spacing: -0.015em;
+
+  /* Gray / 800 */
+  color: #1d2939;
+}
+
+.HireMeBtnLabel {
+  font-family: "Lufga Semibold";
+  line-height: 42px;
+  letter-spacing: -0.015em;
+
+  color: #151515;
+}

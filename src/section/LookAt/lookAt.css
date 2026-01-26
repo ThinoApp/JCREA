@@ -1,0 +1,57 @@
+.LookAtTitle {
+  font-family: "Lufga Semibold";
+
+  letter-spacing: -0.015em;
+
+  color: #344054;
+  span {
+    color: #fd853a;
+  }
+}
+
+.LookAtBtn {
+  font-family: "Lufga Bold";
+  letter-spacing: -0.015em;
+  background-color: #fd853a;
+  color: #ffffff;
+}
+
+.LookAtCard {
+  position: relative;
+  .shadowGradient {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      207.19deg,
+      rgba(0, 0, 0, 0) 47.41%,
+      rgba(0, 0, 0, 0.359679) 76.39%,
+      rgba(0, 0, 0, 0.5) 89.23%
+    );
+  }
+
+  .LookAtCardTitle {
+    font-family: "Lufga Bold";
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+
+  .LookAtCardParagraph {
+    font-family: "Lufga Regular";
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+
+    /* Orange / 100 */
+    color: #ffead5;
+  }
+}
+
+.LookAtCarousel::-webkit-scrollbar {
+  display: none;
+}

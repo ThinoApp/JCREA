@@ -1,5 +1,8 @@
 import Experience from "../section/Experience/Experience";
+import FoodDeliverySolution from "../section/FoodDeliverySolution/FoodDeliverySolution";
 import Hero from "../section/Hero/Hero";
+import HireMe from "../section/HireMe/HireMe";
+import LookAt from "../section/LookAt/LookAt";
 import Services from "../section/Services/Services";
 
 const HomePage = () => {
@@ -8,6 +11,9 @@ const HomePage = () => {
       <Hero />
       <Services />
       <Experience />
+      <HireMe />
+      <LookAt />
+      <FoodDeliverySolution />
     </div>
   );
 };

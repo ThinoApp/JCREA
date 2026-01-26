@@ -1,0 +1,17 @@
+.FoodDeliverySolutionTitle {
+  font-family: "Lufga Bold";
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+
+  /* Gray / 700 */
+  color: #344054;
+}
+
+.FoodDeliverySolutionParagraph {
+  font-family: "Lufga Regular";
+  letter-spacing: -0.015em;
+
+  /* Gray / 700 */
+  color: #344054;
+}
