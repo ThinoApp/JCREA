@@ -1,0 +1,55 @@
+.TestimonialsTitle {
+  font-family: "Lufga Medium";
+
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #fcfcfd;
+}
+
+.TestimonialsParagraph {
+  font-family: "Lufga Regular";
+  letter-spacing: -0.015em;
+
+  color: #fcfcfd;
+}
+
+.userName {
+  font-size: 23.5007px;
+  line-height: 28px;
+
+  /* Gray/25 */
+  color: #fcfcfd;
+}
+
+.userJob {
+  font-size: 18.2784px;
+  line-height: 22px;
+  /* identical to box height */
+
+  /* Gray/25 */
+  color: #fcfcfd;
+}
+
+.userRate {
+  font-family: "Lufga Medium";
+  font-size: 25.6916px;
+  line-height: 34px;
+  /* identical to box height */
+  letter-spacing: -0.015em;
+
+  /* Gray/25 */
+  color: #fcfcfd;
+}
+
+.userTestimonial {
+  font-family: "Lufga Regular";
+  font-size: 20px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+
+  /* Gray / 50 */
+  color: #f9fafb;
+}

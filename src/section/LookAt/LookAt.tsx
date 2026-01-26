@@ -54,7 +54,7 @@ const LookAtCard = ({ title, description, image }: LookAtProps) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div
-      className="LookAtCard w-[90vw] snap-start rounded-2xl overflow-hidden border border-divider-1
+      className="LookAtCard w-[90vw] h-[50vh] lg:h-auto snap-start rounded-2xl overflow-hidden border border-divider-1
       lg:w-[45vw]
       "
       onMouseEnter={() => setIsHovered(true)}

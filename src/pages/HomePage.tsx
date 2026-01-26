@@ -4,6 +4,7 @@ import Hero from "../section/Hero/Hero";
 import HireMe from "../section/HireMe/HireMe";
 import LookAt from "../section/LookAt/LookAt";
 import Services from "../section/Services/Services";
+import Testimonials from "../section/Testimonials/Testimonials";
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
       <HireMe />
       <LookAt />
       <FoodDeliverySolution />
+      <Testimonials />
     </div>
   );
 };
