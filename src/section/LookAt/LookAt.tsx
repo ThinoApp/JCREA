@@ -49,13 +49,19 @@ export const LookAtHeader = ({
   headerClass,
 }: LookAtHeaderProps) => {
   return (
-    <div className="flex flex-col gap-10 items-end sm:items-center w-full lg:flex-row lg:justify-between lg:items-center">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="flex flex-col gap-10 items-end sm:items-center w-full lg:flex-row lg:justify-between lg:items-center"
+    >
       <h2 className={"LookAtTitle text-5xl " + headerClass}>
         {title}&nbsp;
         <span>{highlight}</span>
       </h2>
       <button className="LookAtBtn px-5 py-2 rounded-full">See All</button>
-    </div>
+    </motion.div>
   );
 };
 

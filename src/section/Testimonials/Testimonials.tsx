@@ -1,5 +1,6 @@
 import "./testimonials.css";
 import { QuoteIcon, StarIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
   return (
@@ -8,7 +9,13 @@ const Testimonials = () => {
     sm:justify-center sm:h-[80vh] lg:h-[90vh]
     "
     >
-      <h2 className="TestimonialsTitle text-5xl mx-1 leading-[1.2] sm:text-6xl relative">
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="TestimonialsTitle text-5xl mx-1 leading-[1.2] sm:text-6xl relative"
+      >
         Testimonials That Speak to <br />
         <span className="text-[#FD853A]">My Results</span>
         <img
@@ -16,8 +23,14 @@ const Testimonials = () => {
           alt="testimonialIcon"
           className="absolute top-0 right-0 sm:translate-x-full sm:-translate-y-full"
         />
-      </h2>
-      <p className="TestimonialsParagraph relative text-center sm:text-xl sm:w-2/3">
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.1, duration: 0.5 }}
+        className="TestimonialsParagraph relative text-center sm:text-xl sm:w-2/3"
+      >
         <img
           src="/assets/testemonialIcon2.svg"
           alt="testimonial Text Icon"
@@ -31,13 +44,19 @@ const Testimonials = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue
         interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur
         adipiscing elit. Sed lobortis orci elementum egestas lobortis.
-      </p>
+      </motion.p>
 
-      <div className="grid grid-rows-1 grid-flow-col gap-4 w-full overflow-x-scroll snap-mandatory snap-x scrollbar-hide">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        className="grid grid-rows-1 grid-flow-col gap-4 w-full overflow-x-scroll snap-mandatory snap-x scrollbar-hide"
+      >
         <TestimonialCard />
         <TestimonialCard />
         <TestimonialCard />
-      </div>
+      </motion.div>
     </div>
   );
 };

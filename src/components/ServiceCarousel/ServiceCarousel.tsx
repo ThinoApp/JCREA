@@ -1,6 +1,7 @@
 import "./serviceCarousel.css";
 import ServiceCard from "../ServiceCard/ServiceCard";
 import { useState, useRef } from "react";
+import { motion } from "framer-motion";
 
 const elements = [
   {
@@ -47,7 +48,11 @@ const ServiceCarousel = () => {
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       ref={carouselRef}
       className="ServiceCarousel grid grid-rows-1 grid-flow-col overflow-y-hidden w-screen overflow-x-scroll snap-x snap-mandatory
         lg:grid-flow-col lg:w-full lg:overflow-x-scroll 
@@ -75,7 +80,7 @@ const ServiceCarousel = () => {
           ></div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

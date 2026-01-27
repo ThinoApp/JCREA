@@ -11,7 +11,13 @@ const HireMe = () => {
         lg:grid lg:grid-cols-2  lg:items-center lg:gap-0
     "
     >
-      <div className="relative w-full sm:w-230 lg:w-full  lg:flex lg:justify-center lg:items-center">
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="relative w-full sm:w-230 lg:w-full  lg:flex lg:justify-center lg:items-center"
+      >
         <motion.img
           src="assets/hire_me_bg.png"
           alt="Hire Me Background"
@@ -40,8 +46,14 @@ const HireMe = () => {
             bounce: 0.4,
           }}
         />
-      </div>
-      <div className="flex flex-col items-center gap-10 sm:items-start  ">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+        className="flex flex-col items-center gap-10 sm:items-start  "
+      >
         <h2 className="HireMeTitle text-6xl lg:text-5xl text-center">
           Why <span className="text-[#FD853A]">Hire me</span>?
         </h2>
@@ -62,7 +74,7 @@ const HireMe = () => {
         <button className="HireMeBtnLabel text-3xl  px-10 py-5 border rounded-3xl hover:bg-black! hover:text-white! transition-all duration-300 cursor-pointer">
           Hire me
         </button>
-      </div>
+      </motion.div>
     </div>
   );
 };

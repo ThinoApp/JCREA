@@ -27,9 +27,15 @@ const experiences = [
 const Experience = () => {
   return (
     <div className="flex flex-col gap-12 items-center py-10 px-5 w-screen sm:py-20 lg:w-[70vw] lg:mx-auto">
-      <h2 className="ExperienceTitle text-4xl lg:text-4xl ">
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="ExperienceTitle text-4xl lg:text-4xl "
+      >
         My <span>Work Experience</span>
-      </h2>
+      </motion.h2>
       <div className="flex flex-col w-full gap-12 pr-10 relative sm:pr-0">
         <Illustration
           className=" absolute! right-0 top-1/2 -translate-y-1/2 h-4/5!
@@ -37,7 +43,11 @@ const Experience = () => {
         "
         />
         {experiences.map((item, index) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1, duration: 0.5 }}
             key={item.place}
             className="ExperienceItem box-border flex flex-col gap-4 border-b border-b-divider-1 py-5 
               sm:grid sm:grid-cols-2 sm:flex-row sm:text-start! 
@@ -53,7 +63,7 @@ const Experience = () => {
               <h2 className="title text-2xl">{item.poste}</h2>
               <p className="description">{item.description}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

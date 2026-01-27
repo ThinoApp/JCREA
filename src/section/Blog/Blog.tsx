@@ -2,7 +2,7 @@ import "./blogCard.css";
 import { ArrowUpRight, Dot } from "lucide-react";
 import { LookAtHeader } from "../LookAt/LookAt";
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 interface Blog {
   title: string;
@@ -38,18 +38,30 @@ const blogs: Blog[] = [
 
 const Blog = () => {
   return (
-    <div className="flex flex-col items-center gap-12 px-5 py-10 w-screen lg:px-10 lg:overflow-x-visible">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="flex flex-col items-center gap-12 px-5 py-10 w-screen lg:px-10 lg:overflow-x-visible"
+    >
       <LookAtHeader
         title="From my blog"
         highlight="post"
         headerClass="lg:w-1/6 "
       />
-      <div className="grid grid-rows-1 gap-4 grid-flow-col w-full overflow-x-scroll snap-mandatory snap-x scrollbar-hide lg:gap-8 lg:px-5 lg:py-10 ">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+        className="grid grid-rows-1 gap-4 grid-flow-col w-full overflow-x-scroll snap-mandatory snap-x scrollbar-hide lg:gap-8 lg:px-5 lg:py-10 "
+      >
         {blogs.map((blog, index) => (
           <BlogCard key={index} blog={blog} />
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

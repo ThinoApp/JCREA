@@ -51,7 +51,13 @@ const Footer = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="bg-[#272727] px-4 py-12 flex flex-col gap-8 lg:py-24 lg:px-12 rounded-t-4xl">
-      <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between"
+      >
         <h2 className="font-lufga-semibold text-white text-5xl text-center">
           Lets Connect here
         </h2>
@@ -59,8 +65,12 @@ const Footer = () => {
           <span>Hire Me</span>
           <ArrowUpRightIcon />
         </button>
-      </div>
-      <div
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 0.5 }}
         className="flex flex-col gap-8 py-10 border-y border-y-divider-1
       sm:grid sm:grid-cols-2 sm:grid-rows-2 
       lg:grid-cols-[2fr_1fr_1fr] lg:grid-rows-1
@@ -169,7 +179,7 @@ const Footer = () => {
             </div>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 };

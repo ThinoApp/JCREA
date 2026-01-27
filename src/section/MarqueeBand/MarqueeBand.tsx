@@ -6,7 +6,13 @@ import { motion } from "framer-motion";
 const maqueeText = ["UI/UX Designer", "App Design", "Dashboard"];
 const MarqueeBand = () => {
   return (
-    <div className="w-full h-25 flex items-center justify-center gap-2 bg-[#FB6514] overflow-hidden rounded-lg relative sm:h-36 lg:h-42">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="w-full h-25 flex items-center justify-center gap-2 bg-[#FB6514] overflow-hidden rounded-lg relative sm:h-36 lg:h-42"
+    >
       <div className="bg-white absolute -rotate-8 w-[120%] py-2 flex sm:-rotate-5 lg:-rotate-3">
         <motion.div
           className="flex gap-10 flex-nowrap pr-10"
@@ -37,7 +43,7 @@ const MarqueeBand = () => {
           )}
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

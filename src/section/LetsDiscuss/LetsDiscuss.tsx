@@ -1,15 +1,41 @@
 import { Award, BadgeCheck, Stars } from "lucide-react";
 import "./letsDiscuss.css";
+import { motion } from "framer-motion";
 
 const LetsDiscuss = () => {
   return (
-    <div className="flex flex-col py-10 items-center gap-5 sm:py-20 lg:w-1/2 lg:mx-auto">
-      <h2 className="LetsDiscussTitle text-4xl mx-1  sm:text-6xl sm:leading-[80px]">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="flex flex-col py-10 items-center gap-5 sm:py-20 lg:w-1/2 lg:mx-auto"
+    >
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="LetsDiscussTitle text-4xl mx-1  sm:text-6xl sm:leading-[80px]"
+      >
         Have an Awsome Project Idea?&nbsp;
-        <span className="text-[#FD853A]">Let’s Discuss</span>
-      </h2>
-      <LetsDiscussInput />
-      <div className="flex flex-col gap-4 sm:flex-row  sm:gap-10">
+        <span className="text-[#FD853A]">Let's Discuss</span>
+      </motion.h2>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.1, duration: 0.4 }}
+      >
+        <LetsDiscussInput />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 0.4 }}
+        className="flex flex-col gap-4 sm:flex-row  sm:gap-10"
+      >
         <div className="flex items-center gap-2">
           <Stars fill="#000" strokeWidth={0} />
           <p className="LetsDiscussParagraph">4.9/5 Average Rating</p>
@@ -22,8 +48,8 @@ const LetsDiscuss = () => {
           <BadgeCheck fill="#000" strokeWidth={1} stroke="#fff" />
           <p className="LetsDiscussParagraph">Certified Product Designer</p>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
