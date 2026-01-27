@@ -32,18 +32,27 @@ interface LookAtProps {
 const LookAt = () => {
   return (
     <div className="flex flex-col items-center gap-12 px-5 py-10 w-screen ">
-      <LookAtHeader />
+      <LookAtHeader title="Lets have a look at my" highlight="Portfolio" />
       <LookAtCarousel />
     </div>
   );
 };
 
-const LookAtHeader = () => {
+interface LookAtHeaderProps {
+  title: string;
+  highlight: string;
+  headerClass?: string;
+}
+export const LookAtHeader = ({
+  title,
+  highlight,
+  headerClass,
+}: LookAtHeaderProps) => {
   return (
     <div className="flex flex-col gap-10 items-end sm:items-center w-full lg:flex-row lg:justify-between lg:items-center">
-      <h2 className="LookAtTitle text-5xl">
-        Lets have a look at my&nbsp;
-        <span> Portfolio</span>
+      <h2 className={"LookAtTitle text-5xl " + headerClass}>
+        {title}&nbsp;
+        <span>{highlight}</span>
       </h2>
       <button className="LookAtBtn px-5 py-2 rounded-full">See All</button>
     </div>

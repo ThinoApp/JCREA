@@ -8,11 +8,26 @@ const Testimonials = () => {
     sm:justify-center sm:h-[80vh] lg:h-[90vh]
     "
     >
-      <h2 className="TestimonialsTitle text-5xl mx-1 leading-[1.2] sm:text-6xl">
+      <h2 className="TestimonialsTitle text-5xl mx-1 leading-[1.2] sm:text-6xl relative">
         Testimonials That Speak to <br />
         <span className="text-[#FD853A]">My Results</span>
+        <img
+          src="/assets/testimonialIcon.svg"
+          alt="testimonialIcon"
+          className="absolute top-0 right-0 sm:translate-x-full sm:-translate-y-full"
+        />
       </h2>
-      <p className="TestimonialsParagraph text-center sm:text-xl">
+      <p className="TestimonialsParagraph relative text-center sm:text-xl sm:w-2/3">
+        <img
+          src="/assets/testemonialIcon2.svg"
+          alt="testimonial Text Icon"
+          className="absolute top-0 right-0 -translate-y-full translate-x-10% sm:translate-x-full"
+        />
+        <img
+          src="/assets/testemonialIcon2.svg"
+          alt="testimonial Text Icon"
+          className="absolute bottom-0 left-0 translate-y-[10%] sm:-translate-x-10%"
+        />
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue
         interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur
         adipiscing elit. Sed lobortis orci elementum egestas lobortis.

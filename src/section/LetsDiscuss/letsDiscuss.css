@@ -1,0 +1,16 @@
+.LetsDiscussTitle {
+  font-family: "Lufga Semibold";
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  /* Gray / 700 */
+  color: #344054;
+}
+
+.LetsDiscussParagraph {
+  font-family: "Lufga Regular";
+  /* identical to box height */
+  letter-spacing: -0.015em;
+
+  color: #000000;
+}
