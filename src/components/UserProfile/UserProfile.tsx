@@ -3,6 +3,7 @@ import "./userProfile.css";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { assetUrl } from "../../config";
 
 interface UserProfileProps {
   setIsSvgShow: (value: boolean) => void;
@@ -19,81 +20,44 @@ const UserProfile = ({ isSvgShow, setIsSvgShow }: UserProfileProps) => {
         onMouseLeave={() => setIsSvgShow(false)}
       >
         <img
-          src="/assets/user-profile.png"
+          src={assetUrl("assets/user-profile.png")}
           alt="user-profile"
           className="lg:w-auto lg:scale-110 lg:object-cover relative z-10"
         />
         <AnimatePresence mode="wait">
           {isSvgShow && (
             <motion.img
-              src="/assets/hero_hover_active.svg"
+              src={assetUrl("assets/hero_hover_active.svg")}
               alt="Hover Svg Icon"
-              initial={{
-                y: 200,
-                scale: 0,
-              }}
-              animate={{
-                y: 0,
-                scale: 1.1,
-              }}
-              exit={{
-                y: 200,
-                scale: 0,
-              }}
-              transition={{
-                ease: "backInOut",
-                duration: 0.5,
-              }}
+              initial={{ y: 200, scale: 0 }}
+              animate={{ y: 0, scale: 1.1 }}
+              exit={{ y: 200, scale: 0 }}
+              transition={{ ease: "backInOut", duration: 0.5 }}
               className={`absolute bottom-0 left-0 w-full origin-bottom `}
             />
           )}
         </AnimatePresence>
-        <div
-          className="bg-[#FEB273] absolute bottom-0 translate-y-0 w-screen h-[50vw] -z-10 rounded-t-full
-        lg:w-[50vw] lg:h-[25vw]
-      "
-        />
+        <div className="bg-[#FEB273] absolute bottom-0 translate-y-0 w-screen h-[50vw] -z-10 rounded-t-full lg:w-[50vw] lg:h-[25vw]" />
         <div className="w-6/7 lg:w-2/5 mx-auto absolute bottom-2 left-1/2 -translate-x-1/2 rounded-full p-2 flex items-center gap-2 bg-white/20 backdrop-blur-[20px]  border-divider-1 lg:bottom-10 z-10">
           <motion.button
-            animate={{
-              paddingInline: !isHireMeHover ? "10px" : "5px",
-            }}
-            transition={{
-              duration: 0.3,
-              ease: "backInOut",
-            }}
+            animate={{ paddingInline: !isHireMeHover ? "10px" : "5px" }}
+            transition={{ duration: 0.3, ease: "backInOut" }}
             className={`bg-[#FD853A] duration-300 flex-1 flex flex-row justify-center items-center rounded-full py-2 CTAtext px-4 ${isHireMeHover ? "bg-transparent" : ""}`}
           >
             Portfolio
             {!isHireMeHover && (
               <motion.span
-                initial={{
-                  x: -10,
-                  y: 5,
-                  opacity: 0,
-                }}
-                animate={{
-                  x: 0,
-                  y: 0,
-                  opacity: 1,
-                }}
-                transition={{
-                  duration: 0.3,
-                  ease: "backInOut",
-                }}
+                initial={{ x: -10, y: 5, opacity: 0 }}
+                animate={{ x: 0, y: 0, opacity: 1 }}
+                transition={{ duration: 0.3, ease: "backInOut" }}
               >
                 <ArrowUpRight />
               </motion.span>
             )}
           </motion.button>
           <motion.button
-            animate={{
-              paddingInline: !isHireMeHover ? "10px" : "5px",
-            }}
-            transition={{
-              duration: 0.3,
-              ease: "backInOut",
-            }}
+            animate={{ paddingInline: !isHireMeHover ? "10px" : "5px" }}
+            transition={{ duration: 0.3, ease: "backInOut" }}
             onMouseEnter={() => setIsHireMeHover(true)}
             onMouseLeave={() => setIsHireMeHover(false)}
             className={`flex-1 flex flex-row duration-300 justify-center items-center rounded-full py-2 CTAtext   ${isHireMeHover ? "bg-[#FD853A]" : "bg-transparent"}`}
@@ -101,20 +65,9 @@ const UserProfile = ({ isSvgShow, setIsSvgShow }: UserProfileProps) => {
             Hire Me
             {isHireMeHover && (
               <motion.span
-                initial={{
-                  x: -10,
-                  y: 5,
-                  opacity: 0,
-                }}
-                animate={{
-                  x: 0,
-                  y: 0,
-                  opacity: 1,
-                }}
-                transition={{
-                  duration: 0.3,
-                  ease: "backInOut",
-                }}
+                initial={{ x: -10, y: 5, opacity: 0 }}
+                animate={{ x: 0, y: 0, opacity: 1 }}
+                transition={{ duration: 0.3, ease: "backInOut" }}
               >
                 <ArrowUpRight />
               </motion.span>
