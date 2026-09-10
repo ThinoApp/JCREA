@@ -1,5 +1,6 @@
 import "./greeting.css";
 import { motion } from "framer-motion";
+import { assetUrl } from "../../config";
 
 interface GreetingProps {
   isSvgShow: boolean;
@@ -30,7 +31,7 @@ const Greeting = ({ isSvgShow }: GreetingProps) => {
         <button className="border-2 border-[#171717] bg-white px-5 py-2 rounded-full relative">
           <span className="GreetingHello">Hello !</span>
           <img
-            src="/assets/greeting.svg"
+            src={assetUrl("assets/greeting.svg")}
             alt="greeting"
             className="absolute top-0 right-0 translate-x-full -translate-y-1/2"
           />
@@ -42,7 +43,7 @@ const Greeting = ({ isSvgShow }: GreetingProps) => {
             <br />
             Product Designer
             <img
-              src="/assets/greeting.svg"
+              src={assetUrl("assets/greeting.svg")}
               alt="greeting"
               className="size-20 absolute left-0 bottom-0 -scale-100 translate-y-full sm:-translate-x-full"
             />
